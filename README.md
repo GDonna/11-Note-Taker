@@ -33,4 +33,4 @@ GitHub Repo: https://github.com/GDonna/11-Note-Taker.git
 GitHub Website: https://gdonna.github.io/11-Note-Taker/
 
 ## Page Screenshots
-![Screenshot of Note Taker Application on Browser](/11-Note-Taker/assets/localhost_3001_.png)
+![Screenshot of Note Taker Application on Browser](./assets/localhost_3001_.png)
