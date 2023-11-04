@@ -1,4 +1,4 @@
-
+const path = require("path");
 const router = require("express").Router();
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
@@ -39,7 +39,7 @@ router.post("/notes", (req, res) => {
   });
 });
 
-router.delete("/notes/:id", (req, res) => {
+router.delete("/api/notes/:id", (req, res) => {
   const id = req.params.id;
   console.log(id);
   fs.readFile("../db/db.json", (err, data) => {
@@ -56,7 +56,7 @@ router.delete("/notes/:id", (req, res) => {
       }
     });
   });
-  res.send("test note deleted");
+  res.send("Note Deleted!");
 });
 
 module.exports = router;
