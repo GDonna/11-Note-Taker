@@ -44,9 +44,6 @@ app.post('/api/notes', (req, res) => {
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
 });
-app.listen(PORT, () => {
-  console.log(`app listening to http://127.0.0.1:${PORT}/ `);
-});
 
 // Wildcard route to direct users to a 404 page
 app.get('*', (req, res) =>
