@@ -18,7 +18,7 @@ router.get("/notes", (req, res) => {
 
 router.post("/notes", (req, res) => {
   console.log(req.body);
-  fs.readFile("./db/db.json", (err, data) => {
+  fs.readFile("../db/db.json", (err, data) => {
     if (err) {
       console.error(err);
       return;
@@ -29,7 +29,7 @@ router.post("/notes", (req, res) => {
     newNote.id = uuidv4();
     jsonData.push(req.body);
 
-    fs.writeFile("./db/db.json", JSON.stringify(jsonData), (err) => {
+    fs.writeFile("../db/db.json", JSON.stringify(jsonData), (err) => {
       if (err) console.log(err);
       else {
         console.log("Note written!");
@@ -42,7 +42,7 @@ router.post("/notes", (req, res) => {
 router.delete("/notes/:id", (req, res) => {
   const id = req.params.id;
   console.log(id);
-  fs.readFile("./db/db.json", (err, data) => {
+  fs.readFile("../db/db.json", (err, data) => {
     if (err) {
       console.error(err);
       return;

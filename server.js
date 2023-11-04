@@ -21,7 +21,7 @@ app.get('/notes', (req, res) => {
 });
 // GET Route for all notes
 app.get('/api/notes', (req, res) => {
-  res.sendFile(path.join(__dirname, DB));
+  res.sendFile(path.join(__dirname, pathToDB));
 });
 // GET Route for a specific note
 app.post('/api/notes', (req, res) => {
